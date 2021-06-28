@@ -1,0 +1,907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23055CAC-4127-48E4-A7CC-E4E57D22C907}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GPS201107</RootNamespace>
+    <AssemblyName>GPS201107</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lib.Web.Mvc, Version=3.1.0.0, Culture=neutral, PublicKeyToken=92212eec0425916e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Lib.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\00.Libraries\Log4Net\4.0\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Comm\clsConst.cs" />
+    <Compile Include="App_Comm\clsDBControl.cs" />
+    <Compile Include="App_Comm\clsMail.cs" />
+    <Compile Include="App_Comm\clsTrace.cs" />
+    <Compile Include="App_Comm\LogHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Data\LogMessage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogMessage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BoardController.cs" />
+    <Compile Include="Controllers\EntityController.cs" />
+    <Compile Include="Controllers\HazardousController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ReturnController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AWDBModels.cs" />
+    <Compile Include="Models\AWINVCUSTOMER.cs" />
+    <Compile Include="Models\GpsMail.cs" />
+    <Compile Include="Models\WEB_MAILSENDHISTORY.cs" />
+    <Compile Include="Models\USER_LIST.cs" />
+    <Compile Include="Models\BoardModel.cs" />
+    <Compile Include="Models\GPCONTACTPERSON.cs" />
+    <Compile Include="Models\FileUploader.cs" />
+    <Compile Include="Models\EntityMapper.cs" />
+    <Compile Include="Models\GPBOARD.cs" />
+    <Compile Include="Models\GPSDOCUMENTLIST.cs" />
+    <Compile Include="Models\GPSUPPLIER.cs" />
+    <Compile Include="Models\GPMATERIAL.cs" />
+    <Compile Include="Models\FileSystemInfosRepository.cs" />
+    <Compile Include="Models\GPSUSER.cs" />
+    <Compile Include="Models\Grid\IContactRepository.cs" />
+    <Compile Include="Models\Grid\IRepositoryWithTypedId.cs" />
+    <Compile Include="Models\Grid\ErrorViewModel.cs" />
+    <Compile Include="Models\Grid\Filter.cs" />
+    <Compile Include="Models\Grid\GridModelBinder.cs" />
+    <Compile Include="Models\Grid\GridSettings.cs" />
+    <Compile Include="Models\Grid\JsonModelBinder.cs" />
+    <Compile Include="Models\Grid\Rule.cs" />
+    <Compile Include="Models\HazardousRequest\GpsCategoryInfo.cs" />
+    <Compile Include="Models\HazardousRequest\GpsHmFile.cs" />
+    <Compile Include="Models\HazardousRequest\GpsHmRequest.cs" />
+    <Compile Include="Models\HazardousRequest\GPSHmRequestItem.cs" />
+    <Compile Include="Models\HazardousRequest\GpsHmRequestList.cs" />
+    <Compile Include="Models\HazardousRequest\ViewHazardousMaterial.cs" />
+    <Compile Include="Models\REGISTERDOCUMENT.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\GPS201107.dll" />
+    <Content Include="bin\GPS201107.pdb" />
+    <Content Include="bin\IZ.WebFileManager.dll" />
+    <Content Include="bin\IZ.WebFileManager.pdb" />
+    <Content Include="bin\Lib.Web.Mvc.dll" />
+    <Content Include="Content\css\button.css" />
+    <Content Include="Content\css\ie6.css" />
+    <Content Include="Content\css\ie7.css" />
+    <Content Include="Content\css\input.css" />
+    <Content Include="Content\css\reset.css" />
+    <Content Include="Content\css\table.css" />
+    <Content Include="Content\EhsImages\background.jpg" />
+    <Content Include="Content\EhsImages\background_gradient.png" />
+    <Content Include="Content\EhsImages\bg.png" />
+    <Content Include="Content\EhsImages\bgHeader.jpg" />
+    <Content Include="Content\EhsImages\cats.jpg" />
+    <Content Include="Content\EhsImages\Environment.jpg" />
+    <Content Include="Content\EhsImages\en_feature.jpg" />
+    <Content Include="Content\EhsImages\greenglobe.jpg" />
+    <Content Include="Content\EhsImages\greenglobe.png" />
+    <Content Include="Content\EhsImages\postcard-slideshow1.jpg" />
+    <Content Include="Content\EhsImages\safetyHealthEnviroment.jpg" />
+    <Content Include="Content\EhsImages\shadow_left.png" />
+    <Content Include="Content\EhsImages\shadow_right.png" />
+    <Content Include="Content\GPS201107.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\bg.gif" />
+    <Content Include="Content\images\bg2.gif" />
+    <Content Include="Content\images\bg_line.jpg" />
+    <Content Include="Content\images\bg_line2.jpg" />
+    <Content Include="Content\images\bottom.gif" />
+    <Content Include="Content\images\bottom2.gif" />
+    <Content Include="Content\images\btn01.gif" />
+    <Content Include="Content\images\btn02.gif" />
+    <Content Include="Content\images\btn03.gif" />
+    <Content Include="Content\images\btn04.gif" />
+    <Content Include="Content\images\btn05.gif" />
+    <Content Include="Content\images\btn06.gif" />
+    <Content Include="Content\images\btn07.gif" />
+    <Content Include="Content\images\btn08.gif" />
+    <Content Include="Content\images\btn09.gif" />
+    <Content Include="Content\images\btn10.gif" />
+    <Content Include="Content\images\btn11.gif" />
+    <Content Include="Content\images\btn12.gif" />
+    <Content Include="Content\images\btn13.gif" />
+    <Content Include="Content\images\btn14.gif" />
+    <Content Include="Content\images\btn15.gif" />
+    <Content Include="Content\images\btn16.gif" />
+    <Content Include="Content\images\btn17.gif" />
+    <Content Include="Content\images\btn18.gif" />
+    <Content Include="Content\images\btn19.gif" />
+    <Content Include="Content\images\btn20.gif" />
+    <Content Include="Content\images\btn24.gif" />
+    <Content Include="Content\images\btn25.gif" />
+    <Content Include="Content\images\btn26.gif" />
+    <Content Include="Content\images\btn27.gif" />
+    <Content Include="Content\images\btn28.gif" />
+    <Content Include="Content\images\btn29.gif" />
+    <Content Include="Content\images\btn30.gif" />
+    <Content Include="Content\images\btn31.gif" />
+    <Content Include="Content\images\btn32.gif" />
+    <Content Include="Content\images\btn33.gif" />
+    <Content Include="Content\images\btn34.gif" />
+    <Content Include="Content\images\btn35.gif" />
+    <Content Include="Content\images\btn36.gif" />
+    <Content Include="Content\images\btn37.gif" />
+    <Content Include="Content\images\btn38.gif" />
+    <Content Include="Content\images\btn39.gif" />
+    <Content Include="Content\images\btn40.gif" />
+    <Content Include="Content\images\btn41.gif" />
+    <Content Include="Content\images\btn42.gif" />
+    <Content Include="Content\images\btn43.gif" />
+    <Content Include="Content\images\btn44.gif" />
+    <Content Include="Content\images\btn45.gif" />
+    <Content Include="Content\images\btn46.gif" />
+    <Content Include="Content\images\btn47.gif" />
+    <Content Include="Content\images\btn48.gif" />
+    <Content Include="Content\images\btn_add.gif" />
+    <Content Include="Content\images\btn_add2.gif" />
+    <Content Include="Content\images\btn_delete.gif" />
+    <Content Include="Content\images\btn_menu_document-over.gif" />
+    <Content Include="Content\images\btn_menu_document.gif" />
+    <Content Include="Content\images\btn_menu_expired-over.gif" />
+    <Content Include="Content\images\btn_menu_expired.gif" />
+    <Content Include="Content\images\btn_menu_register-over.gif" />
+    <Content Include="Content\images\btn_menu_register.gif" />
+    <Content Include="Content\images\btn_menu_search-over.gif" />
+    <Content Include="Content\images\btn_menu_search.gif" />
+    <Content Include="Content\images\btn_menu_HazardousMaterialReport-over.png" />
+    <Content Include="Content\images\btn_menu_HazardousMaterialReport.png" />
+    <Content Include="Content\images\btn_menu_supplier-over.gif" />
+    <Content Include="Content\images\btn_menu_supplier.gif" />
+    <Content Include="Content\images\btn_menu_system-over.gif" />
+    <Content Include="Content\images\btn_menu_system.gif" />
+    <Content Include="Content\images\clear.gif" />
+    <Content Include="Content\images\Hazardous_Register.png" />
+    <Content Include="Content\images\im19-1.gif" />
+    <Content Include="Content\images\img01.jpg" />
+    <Content Include="Content\images\img02.gif" />
+    <Content Include="Content\images\img02.jpg" />
+    <Content Include="Content\images\img03.gif" />
+    <Content Include="Content\images\img03.jpg" />
+    <Content Include="Content\images\img04.gif" />
+    <Content Include="Content\images\img04.jpg" />
+    <Content Include="Content\images\img05.gif" />
+    <Content Include="Content\images\img05.jpg" />
+    <Content Include="Content\images\img06.gif" />
+    <Content Include="Content\images\img06.jpg" />
+    <Content Include="Content\images\img07.gif" />
+    <Content Include="Content\images\img07.jpg" />
+    <Content Include="Content\images\img08.gif" />
+    <Content Include="Content\images\img08.jpg" />
+    <Content Include="Content\images\img09.gif" />
+    <Content Include="Content\images\img09.jpg" />
+    <Content Include="Content\images\img10.gif" />
+    <Content Include="Content\images\img10.jpg" />
+    <Content Include="Content\images\img11.gif" />
+    <Content Include="Content\images\img11.jpg" />
+    <Content Include="Content\images\img12.gif" />
+    <Content Include="Content\images\img12.jpg" />
+    <Content Include="Content\images\img13.gif" />
+    <Content Include="Content\images\img13.jpg" />
+    <Content Include="Content\images\img14.gif" />
+    <Content Include="Content\images\img14.jpg" />
+    <Content Include="Content\images\img15.gif" />
+    <Content Include="Content\images\img15.jpg" />
+    <Content Include="Content\images\img16.gif" />
+    <Content Include="Content\images\img16.jpg" />
+    <Content Include="Content\images\img17.gif" />
+    <Content Include="Content\images\img18.gif" />
+    <Content Include="Content\images\img4.gif" />
+    <Content Include="Content\images\line01.gif" />
+    <Content Include="Content\images\line02.gif" />
+    <Content Include="Content\images\line03.gif" />
+    <Content Include="Content\images\line04.gif" />
+    <Content Include="Content\images\line05.gif" />
+    <Content Include="Content\images\line06-1.gif" />
+    <Content Include="Content\images\line06.gif" />
+    <Content Include="Content\images\line10.gif" />
+    <Content Include="Content\images\line11.gif" />
+    <Content Include="Content\images\line12.gif" />
+    <Content Include="Content\images\line13.gif" />
+    <Content Include="Content\images\line14.gif" />
+    <Content Include="Content\images\line15.gif" />
+    <Content Include="Content\images\line16.gif" />
+    <Content Include="Content\images\line17.gif" />
+    <Content Include="Content\images\line5.gif" />
+    <Content Include="Content\images\line6.gif" />
+    <Content Include="Content\images\line7.gif" />
+    <Content Include="Content\images\login.gif" />
+    <Content Include="Content\images\login2.gif" />
+    <Content Include="Content\images\menu.gif" />
+    <Content Include="Content\images\notice.gif" />
+    <Content Include="Content\images\notice_button.jpg" />
+    <Content Include="Content\images\pic01.gif" />
+    <Content Include="Content\images\pic02.gif" />
+    <Content Include="Content\images\pic03-1.gif" />
+    <Content Include="Content\images\pic03.gif" />
+    <Content Include="Content\images\pic04.gif" />
+    <Content Include="Content\images\pic05.gif" />
+    <Content Include="Content\images\pic06.gif" />
+    <Content Include="Content\images\pic07.gif" />
+    <Content Include="Content\images\pic08.gif" />
+    <Content Include="Content\images\pic09.gif" />
+    <Content Include="Content\images\pic10.gif" />
+    <Content Include="Content\images\pic11.gif" />
+    <Content Include="Content\images\pic12.gif" />
+    <Content Include="Content\images\pic13.gif" />
+    <Content Include="Content\images\sub_03_title_01.gif" />
+    <Content Include="Content\img\ajax-loader.gif" />
+    <Content Include="Content\img\btn_pack.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\compressed.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\edit.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\excel.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\favorites.jpg" />
+    <Content Include="Content\IZWebFileManager\images\16x16\html.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\image.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\media.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\mydocuments.jpg" />
+    <Content Include="Content\IZWebFileManager\images\16x16\mypictures.jpg" />
+    <Content Include="Content\IZWebFileManager\images\16x16\notepad.png" />
+    <Content Include="Content\IZWebFileManager\images\16x16\PowerPoint.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\script.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\smile.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\styleSheet.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\text.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\word.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\xml.gif" />
+    <Content Include="Content\IZWebFileManager\images\16x16\zip.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\compressed.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\excel.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\favorites.jpg" />
+    <Content Include="Content\IZWebFileManager\images\32x32\html.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\image.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\media.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\mydocuments.jpg" />
+    <Content Include="Content\IZWebFileManager\images\32x32\mypictures.jpg" />
+    <Content Include="Content\IZWebFileManager\images\32x32\notepad.png" />
+    <Content Include="Content\IZWebFileManager\images\32x32\PowerPoint.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\script.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\styleSheet.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\Word.gif" />
+    <Content Include="Content\IZWebFileManager\images\32x32\xml.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_favorite.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_favorite.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_home.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_home.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_photo.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\16x16\folder_photo.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_favorite.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_favorite.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_home.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_home.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_photo.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\32x32\folder_photo.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Copy.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Copy.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Delete.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Delete.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FileLarge.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FileLarge.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FileSmall.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FileSmall.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderLarge.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderLarge.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderSmall.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderSmall.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderUp.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\FolderUp.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Move.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Move.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\NewFolder.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Process.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Refresh.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Rename.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\Rename.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\RootFolderLarge.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\RootFolderLarge.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\RootFolderSmall.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\RootFolderSmall.png" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\View.gif" />
+    <Content Include="Content\IZWebFileManager\Nuvola\icons\View.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\emblem-favorite.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\emblem-photos.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\folder-remote.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\folder.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\text-x-generic.png" />
+    <Content Include="Content\IZWebFileManager\Tango\16x16\user-home.png" />
+    <Content Include="Content\IZWebFileManager\Tango\32x32\emblem-favorite.png" />
+    <Content Include="Content\IZWebFileManager\Tango\32x32\emblem-photos.png" />
+    <Content Include="Content\IZWebFileManager\Tango\32x32\folder.png" />
+    <Content Include="Content\IZWebFileManager\Tango\32x32\text-x-generic.png" />
+    <Content Include="Content\IZWebFileManager\Tango\32x32\user-home.png" />
+    <Content Include="Content\IZWebFileManager\Templates\HTMLPage.htm" />
+    <Content Include="Content\IZWebFileManager\Templates\JScript.js" />
+    <Content Include="Content\IZWebFileManager\Templates\StyleSheet.css" />
+    <Content Include="Content\main\images\bg.gif" />
+    <Content Include="Content\main\script.js" />
+    <Content Include="Content\main\style.css" />
+    <Content Include="Content\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Content\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Content\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Content\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Content\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Content\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Content\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Content\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Content\redmond\jquery-ui-1.8.9.custom.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\treeview\images\ajax-loader.gif" />
+    <Content Include="Content\treeview\images\file.gif" />
+    <Content Include="Content\treeview\images\folder-closed.gif" />
+    <Content Include="Content\treeview\images\folder.gif" />
+    <Content Include="Content\treeview\images\minus.gif" />
+    <Content Include="Content\treeview\images\plus.gif" />
+    <Content Include="Content\treeview\images\treeview-black-line.gif" />
+    <Content Include="Content\treeview\images\treeview-black.gif" />
+    <Content Include="Content\treeview\images\treeview-default-line.gif" />
+    <Content Include="Content\treeview\images\treeview-default.gif" />
+    <Content Include="Content\treeview\images\treeview-famfamfam-line.gif" />
+    <Content Include="Content\treeview\images\treeview-famfamfam.gif" />
+    <Content Include="Content\treeview\images\treeview-gray-line.gif" />
+    <Content Include="Content\treeview\images\treeview-gray.gif" />
+    <Content Include="Content\treeview\images\treeview-red-line.gif" />
+    <Content Include="Content\treeview\images\treeview-red.gif" />
+    <Content Include="Content\treeview\jquery-treeview.css" />
+    <Content Include="Content\uploadify\cancel.png" />
+    <Content Include="Content\uploadify\expressInstall.swf" />
+    <Content Include="Content\uploadify\jquery-1.4.2.min.js" />
+    <Content Include="Content\uploadify\jquery.uploadify.v2.1.4.js" />
+    <Content Include="Content\uploadify\jquery.uploadify.v2.1.4.min.js" />
+    <Content Include="Content\uploadify\swfobject.js" />
+    <Content Include="Content\uploadify\uploadify.allglyphs.swf" />
+    <Content Include="Content\uploadify\uploadify.css" />
+    <Content Include="Content\uploadify\uploadify.swf" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\Copy.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\Delete.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\FolderUp.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\Loader.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\Move.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\Rename.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\ToolbarBG.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\ToolbarL.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003\ToolbarR.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\Copy.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\Delete.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\FolderUp.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\Move.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\Rename.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\ToolbarBG.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\ToolbarL.gif" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005\ToolbarR.gif" />
+    <Content Include="Filemanager\Bin\Interop.Shell32.dll" />
+    <Content Include="Filemanager\Bin\IZ.WebFileManager.dll" />
+    <Content Include="Filemanager\Bin\IZ.WebFileManager.pdb" />
+    <Content Include="Filemanager\Filemanager.aspx" />
+    <Content Include="Filemanager\Filemanager_user.aspx" />
+    <Content Include="Filemanager\CustomCommands.aspx" />
+    <Content Include="Filemanager\Customized.aspx" />
+    <Content Include="Filemanager\Default1.aspx" />
+    <Content Include="Filemanager\Files\My Documents\JScript.js" />
+    <Content Include="Filemanager\Files\My Documents\New HTML File.htm" />
+    <Content Include="Filemanager\Files\My Documents\New Text Document.txt" />
+    <Content Include="Filemanager\Files\My Documents\StyleSheet.css" />
+    <Content Include="Filemanager\Files\My Documents\_settings.txt" />
+    <Content Include="Filemanager\Files\My Documents\구반출입STATUS.txt" />
+    <Content Include="Filemanager\images\16x16\compressed.gif" />
+    <Content Include="Filemanager\images\16x16\edit.gif" />
+    <Content Include="Filemanager\images\16x16\excel.gif" />
+    <Content Include="Filemanager\images\16x16\favorites.jpg" />
+    <Content Include="Filemanager\images\16x16\html.gif" />
+    <Content Include="Filemanager\images\16x16\image.gif" />
+    <Content Include="Filemanager\images\16x16\media.gif" />
+    <Content Include="Filemanager\images\16x16\mydocuments.jpg" />
+    <Content Include="Filemanager\images\16x16\mypictures.jpg" />
+    <Content Include="Filemanager\images\16x16\notepad.png" />
+    <Content Include="Filemanager\images\16x16\PowerPoint.gif" />
+    <Content Include="Filemanager\images\16x16\script.gif" />
+    <Content Include="Filemanager\images\16x16\smile.gif" />
+    <Content Include="Filemanager\images\16x16\styleSheet.gif" />
+    <Content Include="Filemanager\images\16x16\text.gif" />
+    <Content Include="Filemanager\images\16x16\word.gif" />
+    <Content Include="Filemanager\images\16x16\xml.gif" />
+    <Content Include="Filemanager\images\16x16\zip.gif" />
+    <Content Include="Filemanager\images\32x32\compressed.gif" />
+    <Content Include="Filemanager\images\32x32\excel.gif" />
+    <Content Include="Filemanager\images\32x32\favorites.jpg" />
+    <Content Include="Filemanager\images\32x32\html.gif" />
+    <Content Include="Filemanager\images\32x32\image.gif" />
+    <Content Include="Filemanager\images\32x32\media.gif" />
+    <Content Include="Filemanager\images\32x32\mydocuments.jpg" />
+    <Content Include="Filemanager\images\32x32\mypictures.jpg" />
+    <Content Include="Filemanager\images\32x32\notepad.png" />
+    <Content Include="Filemanager\images\32x32\PowerPoint.gif" />
+    <Content Include="Filemanager\images\32x32\script.gif" />
+    <Content Include="Filemanager\images\32x32\styleSheet.gif" />
+    <Content Include="Filemanager\images\32x32\Word.gif" />
+    <Content Include="Filemanager\images\32x32\xml.gif" />
+    <Content Include="Filemanager\Nuvola.aspx" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_favorite.gif" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_favorite.png" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_home.gif" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_home.png" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_photo.gif" />
+    <Content Include="Filemanager\Nuvola\16x16\folder_photo.png" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_favorite.gif" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_favorite.png" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_home.gif" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_home.png" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_photo.gif" />
+    <Content Include="Filemanager\Nuvola\32x32\folder_photo.png" />
+    <Content Include="Filemanager\Nuvola\icons\Copy.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Copy.png" />
+    <Content Include="Filemanager\Nuvola\icons\Delete.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Delete.png" />
+    <Content Include="Filemanager\Nuvola\icons\FileLarge.gif" />
+    <Content Include="Filemanager\Nuvola\icons\FileLarge.png" />
+    <Content Include="Filemanager\Nuvola\icons\FileSmall.gif" />
+    <Content Include="Filemanager\Nuvola\icons\FileSmall.png" />
+    <Content Include="Filemanager\Nuvola\icons\FolderLarge.gif" />
+    <Content Include="Filemanager\Nuvola\icons\FolderLarge.png" />
+    <Content Include="Filemanager\Nuvola\icons\FolderSmall.gif" />
+    <Content Include="Filemanager\Nuvola\icons\FolderSmall.png" />
+    <Content Include="Filemanager\Nuvola\icons\FolderUp.gif" />
+    <Content Include="Filemanager\Nuvola\icons\FolderUp.png" />
+    <Content Include="Filemanager\Nuvola\icons\Move.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Move.png" />
+    <Content Include="Filemanager\Nuvola\icons\NewFolder.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Process.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Refresh.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Rename.gif" />
+    <Content Include="Filemanager\Nuvola\icons\Rename.png" />
+    <Content Include="Filemanager\Nuvola\icons\RootFolderLarge.gif" />
+    <Content Include="Filemanager\Nuvola\icons\RootFolderLarge.png" />
+    <Content Include="Filemanager\Nuvola\icons\RootFolderSmall.gif" />
+    <Content Include="Filemanager\Nuvola\icons\RootFolderSmall.png" />
+    <Content Include="Filemanager\Nuvola\icons\View.gif" />
+    <Content Include="Filemanager\Nuvola\icons\View.png" />
+    <Content Include="Filemanager\Office2003.aspx" />
+    <Content Include="Filemanager\Shared\Error.aspx" />
+    <Content Include="Filemanager\Shared\LogOnUserControl.ascx" />
+    <Content Include="Filemanager\Styles.aspx" />
+    <Content Include="Filemanager\Tango.aspx" />
+    <Content Include="Filemanager\Tango\16x16\emblem-favorite.png" />
+    <Content Include="Filemanager\Tango\16x16\emblem-photos.png" />
+    <Content Include="Filemanager\Tango\16x16\folder-remote.png" />
+    <Content Include="Filemanager\Tango\16x16\folder.png" />
+    <Content Include="Filemanager\Tango\16x16\text-x-generic.png" />
+    <Content Include="Filemanager\Tango\16x16\user-home.png" />
+    <Content Include="Filemanager\Tango\32x32\emblem-favorite.png" />
+    <Content Include="Filemanager\Tango\32x32\emblem-photos.png" />
+    <Content Include="Filemanager\Tango\32x32\folder.png" />
+    <Content Include="Filemanager\Tango\32x32\text-x-generic.png" />
+    <Content Include="Filemanager\Tango\32x32\user-home.png" />
+    <Content Include="Filemanager\Templates\HTMLPage.htm" />
+    <Content Include="Filemanager\Templates\JScript.js" />
+    <Content Include="Filemanager\Templates\StyleSheet.css" />
+    <Content Include="Filemanager\VS2005.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="ReferenceAssemblies\jQuery.Treeview.dll" />
+    <Content Include="ReferenceAssemblies\jQuery.Treeview.pdb" />
+    <Content Include="ReferenceAssemblies\Lib.Web.Mvc.dll" />
+    <Content Include="ReferenceAssemblies\Lib.Web.Mvc.xml" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\css\bootstrap-theme.css" />
+    <Content Include="Scripts\css\bootstrap-theme.css.map" />
+    <Content Include="Scripts\css\bootstrap-theme.min.css" />
+    <Content Include="Scripts\css\bootstrap.css" />
+    <Content Include="Scripts\css\bootstrap.css.map" />
+    <Content Include="Scripts\css\bootstrap.min.css" />
+    <Content Include="Scripts\jqgrid\css\ellipsis-xbl.xml" />
+    <Content Include="Scripts\jqgrid\css\ui.jqgrid.css" />
+    <Content Include="Scripts\jqgrid\js\Changes.txt" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\jqgrid\js\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\jqgrid\js\install.txt" />
+    <Content Include="Scripts\jqgrid\js\jquery-1.5.2.min.js" />
+    <Content Include="Scripts\jqgrid\js\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\jqgrid\js\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.addons.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.postext.js" />
+    <Content Include="Scripts\jqgrid\plugins\grid.setcolumns.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.contextmenu.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.searchFilter.js" />
+    <Content Include="Scripts\jqgrid\plugins\jquery.tablednd.js" />
+    <Content Include="Scripts\jqgrid\plugins\ui.multiselect.css" />
+    <Content Include="Scripts\jqgrid\plugins\ui.multiselect.js" />
+    <Content Include="Scripts\jqgrid\src\css\ellipsis-xbl.xml" />
+    <Content Include="Scripts\jqgrid\src\css\ui.jqgrid.css" />
+    <Content Include="Scripts\jqgrid\src\css\ui.multiselect.css" />
+    <Content Include="Scripts\jqgrid\src\grid.base.js" />
+    <Content Include="Scripts\jqgrid\src\grid.celledit.js" />
+    <Content Include="Scripts\jqgrid\src\grid.common.js" />
+    <Content Include="Scripts\jqgrid\src\grid.custom.js" />
+    <Content Include="Scripts\jqgrid\src\grid.filter.js" />
+    <Content Include="Scripts\jqgrid\src\grid.formedit.js" />
+    <Content Include="Scripts\jqgrid\src\grid.grouping.js" />
+    <Content Include="Scripts\jqgrid\src\grid.import.js" />
+    <Content Include="Scripts\jqgrid\src\grid.inlinedit.js" />
+    <Content Include="Scripts\jqgrid\src\grid.jqueryui.js" />
+    <Content Include="Scripts\jqgrid\src\grid.loader.js" />
+    <Content Include="Scripts\jqgrid\src\grid.subgrid.js" />
+    <Content Include="Scripts\jqgrid\src\grid.tbltogrid.js" />
+    <Content Include="Scripts\jqgrid\src\grid.treegrid.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-ar.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-bg.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-bg1251.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-cat.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-cn.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-cs.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-da.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-de.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-dk.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-el.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-en.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-es.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-fa.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-fi.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-fr.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-gl.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-he.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-hu.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-is.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-it.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-ja.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-lt.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-mne.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-nl.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-no.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-pl.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-pt-br.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-pt.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-ro.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-ru.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-sk.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-sr.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-sv.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-th.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-tr.js" />
+    <Content Include="Scripts\jqgrid\src\i18n\grid.locale-ua.js" />
+    <Content Include="Scripts\jqgrid\src\jqDnR.js" />
+    <Content Include="Scripts\jqgrid\src\jqModal.js" />
+    <Content Include="Scripts\jqgrid\src\jquery.fmatter.js" />
+    <Content Include="Scripts\jqgrid\src\JsonXml.js" />
+    <Content Include="Scripts\jquery-1.4.2.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery-treeview-1.4.0.min.js" />
+    <Content Include="Scripts\jquery-treeview-async-0.1.0.js" />
+    <Content Include="Scripts\jquery-ui-1.8.9.custom.min.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.ui.datepicker-ko.js" />
+    <Content Include="Scripts\js\grid.base.js" />
+    <Content Include="Scripts\js\grid.celledit.js" />
+    <Content Include="Scripts\js\grid.common.js" />
+    <Content Include="Scripts\js\grid.custom.js" />
+    <Content Include="Scripts\js\grid.formedit.js" />
+    <Content Include="Scripts\js\grid.grouping.js" />
+    <Content Include="Scripts\js\grid.import.js" />
+    <Content Include="Scripts\js\grid.inlinedit.js" />
+    <Content Include="Scripts\js\grid.jqueryui.js" />
+    <Content Include="Scripts\js\grid.loader.js" />
+    <Content Include="Scripts\js\grid.locale-en.js" />
+    <Content Include="Scripts\js\grid.locale-kr.js" />
+    <Content Include="Scripts\js\grid.postext.js" />
+    <Content Include="Scripts\js\grid.setcolumns.js" />
+    <Content Include="Scripts\js\grid.subgrid.js" />
+    <Content Include="Scripts\js\grid.tbltogrid.js" />
+    <Content Include="Scripts\js\grid.treegrid.js" />
+    <Content Include="Scripts\js\jqDnR.js" />
+    <Content Include="Scripts\js\jqModal.js" />
+    <Content Include="Scripts\js\jquery-1.6.3.min.js" />
+    <Content Include="Scripts\js\jquery.fmatter.js" />
+    <Content Include="Scripts\js\jquery.jqGrid.min.js" />
+    <Content Include="Scripts\js\jquery.searchFilter.js" />
+    <Content Include="Scripts\js\JsonXml.js" />
+    <Content Include="Scripts\js\ui.multiselect.js" />
+    <Content Include="Scripts\jquery.Nsform.js" />
+    <Content Include="Scripts\own_script\validation_textbox.js" />
+    <Content Include="Views\Board\Readboard_popup.aspx" />
+    <Content Include="Views\Board\ImageUpload.aspx" />
+    <Content Include="Views\Board\Index.aspx" />
+    <Content Include="Views\Board\Index_Search.aspx" />
+    <Content Include="Views\Board\Modifyboard.aspx" />
+    <Content Include="Views\Board\ModifyboardAction.aspx" />
+    <Content Include="Views\Board\Readboard.aspx" />
+    <Content Include="Views\Board\Readboard_Search.aspx" />
+    <Content Include="Views\Board\Replyboard.aspx" />
+    <Content Include="Views\Board\ReplyboardAction.aspx" />
+    <Content Include="Views\Board\GetNotice.aspx" />
+    <Content Include="Views\Board\Writeboard.aspx" />
+    <Content Include="Views\Board\WriteboardAction.aspx" />
+    <Content Include="Views\Hazardous\ViewHazardousMaterial.aspx" />
+    <Content Include="Views\Hazardous\ViewHazardousMaterialDetail.aspx" />
+    <Content Include="Views\Main\Index.aspx" />
+    <Content Include="Views\Main\Menu.aspx" />
+    <Content Include="Views\Menu\Default.aspx" />
+    <Content Include="Views\Menu\ExpiredList.aspx" />
+    <Content Include="Views\Menu\HazardousMaterialReportList.aspx" />
+    <Content Include="Views\Menu\Register.aspx" />
+    <Content Include="Views\Menu\Search.aspx" />
+    <Content Include="Views\Menu\ActiveManagement.aspx" />
+    <Content Include="Views\Menu\SupplierInformation.aspx" />
+    <Content Include="Views\Menu\SystemManagement.aspx" />
+    <Content Include="Views\Menu\UserManagement.aspx" />
+    <Content Include="Views\Return\Error_authority.aspx" />
+    <Content Include="Views\Return\Error_login.aspx" />
+    <Content Include="Views\Return\Return_ExpiredList.aspx" />
+    <Content Include="Views\Return\Return_Register.aspx" />
+    <Content Include="Views\Return\Return_SupplierInformation.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\HazardousMaterial.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Data\LogMessage.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LogMessage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.de.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.es.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.fr.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.he.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.it.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.nl.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.no.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.pt.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.ru.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.sr-Cyrl-CS.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.sr-Latn-CS.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.sv.resx" />
+    <EmbeddedResource Include="Filemanager\App_GlobalResources\WebFileManager\IZWebFileManagerResource.tr.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\GPS.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\img\Thumbs.db" />
+    <None Include="Content\IZWebFileManager\images\32x32\Thumbs.db" />
+    <Content Include="Views\Shared\MasterPage.master" />
+    <Content Include="Web.sitemap" />
+    <Content Include="Filemanager\App_Browsers\BrowserFile.browser" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.Office2003.skin" />
+    <Content Include="Filemanager\App_Themes\Default\IZWebFileManager.VS2005.skin" />
+    <None Include="Content\uploadify\uploadify.fla" />
+    <None Include="Filemanager\Files\My Documents\2011 Pending &amp; Plan - CIM_dkKim%281%29.xls" />
+    <None Include="Filemanager\Files\My Documents\2011 Pending &amp; Plan - CIM_dkKim%282%29.xls" />
+    <None Include="Filemanager\Files\My Documents\2011 Pending &amp; Plan - CIM_dkKim.xls" />
+    <None Include="Filemanager\Files\My Documents\New Microsoft Word Document.doc" />
+    <None Include="Filemanager\Files\My Documents\육아휴직복직신청서양식.doc" />
+    <None Include="Filemanager\images\32x32\Thumbs.db" />
+    <Content Include="Filemanager\MasterPage.master" />
+    <Content Include="Filemanager\Web.sitemap" />
+    <Content Include="Filemanager\Shared\GPS.Master" />
+    <Content Include="Filemanager\Shared\MasterPage.master" />
+    <Content Include="Filemanager\Shared\Site.Master" />
+    <None Include="ReferenceAssemblies\Lib.Web.Mvc.dll.refresh" />
+    <Content Include="Views\Shared\Blank.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IZWebFileManager\WebFileManager.csproj">
+      <Project>{7B6305F4-FE54-4888-8200-C6D3076FEF0F}</Project>
+      <Name>WebFileManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\css2\" />
+    <Folder Include="Filemanager\App_Code\" />
+    <Folder Include="Filemanager\Files\My Documents\New Folder%281%29\" />
+    <Folder Include="Filemanager\Files\My Documents\New Folder\" />
+    <Folder Include="Files\My Documents\NewFolder1\" />
+    <Folder Include="Files\My Documents\NewFolder2\" />
+    <Folder Include="Files\My Documents\NewFolder3\" />
+    <Folder Include="Files\NewFolder1\" />
+    <Folder Include="GPSdocument\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3048</DevelopmentServerPort>
+          <DevelopmentServerVPath>/gps</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,29 @@
+﻿#header
+{
+
+}
+#menucontainer
+{
+    margin-top:25px;
+}
+#menu
+{
+    margin-top:10px;
+     padding-left:30px;
+     margin-left:0px;
+}
+#title img
+{
+    margin-top:-10px;
+}
+#main
+{
+    margin-top:0px;
+    background-color:White;
+    
+}
+#logindisplay
+{
+
+}
+#slide {position:absolute; bottom:0; height:4px; background:#89957a; z-index:10}

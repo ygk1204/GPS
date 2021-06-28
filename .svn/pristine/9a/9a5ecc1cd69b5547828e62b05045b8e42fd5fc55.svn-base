@@ -1,0 +1,165 @@
+body 
+{
+	 margin-left:0; margin-top:0;background: #5c87b2 repeat left top;font-family:Dotum,verdana,arial;font-size:12px;color:#000000;     
+}
+.body
+{
+     background: url(gps/Content/images/bg_line.jpg) repeat  left top;
+     
+}
+.body_line
+{
+     background: url(gps/Content/images/bg_line2.jpg) repeat  left top;
+}
+table, div { 
+     font-family:Dotum,verdana,arial; font-size:12px; color:#000000; 
+}
+select, input, textarea { 
+     border:1 solid #B0B0B0; font-family:Dotum,verdana,arial; font-size:12px; color:#585858; height:18; padding:3; 
+}
+form { margin:0; }
+img { border:0; }
+
+
+.table_text{ 
+     font-family:Dotum,verdana,arial; font-size:12px; font-weight:bold; color:#816B6B; 
+}
+
+.result_text{ 
+     font-family:Dotum,verdana,arial; font-size:12px; color:#816B6B; 
+}
+.table_text2{
+      font-family:Dotum,verdana,arial; font-size:12px;font-weight:bold; color:#7A6F6B;
+}
+
+
+.print_title{ 
+     font-family:Dotum,verdana,arial; font-size:13px; font-weight:bold; color:#333333; 
+}
+.print_text{ 
+     font-family:Dotum,verdana,arial; font-size:11px; font-weight:bold; color:#333333; 
+}
+.print_text2{ 
+     font-family:Dotum,verdana,arial; font-size:12px; color:#333333; 
+}
+
+.b { font-family:Dotum,verdana,arial; font-weight:bold;	color:#787878;}
+.title {
+	 font-family:Dotum,verdana,arial; font-size:12px; font-weight:bold; color:#fff;
+}
+.title2 {
+	 font-family:Dotum,verdana,arial; font-size:15px; font-weight:bold;	 color:#5A7CB5;
+}
+
+.user-title {
+	 font-family:Dotum,verdana,arial; font-size:12px; font-weight:bold; color:#000000;
+}
+.user-title2 {
+	 font-family:Dotum,verdana,arial; font-size:14px; font-weight:bold; color:#000000;
+}
+.track_number 
+{
+	  padding-top:1px;padding-left:3px;
+}
+	 
+.text_box {
+	  padding-left:2px;  BORDER-RIGHT: #dddddd 1px solid;  BORDER-TOP: #dddddd 1px solid; 	 FONT-SIZE: 12px;  Font-weight:bold;  BORDER-LEFT: #dddddd 1px solid; 
+	  COLOR: #765C29;  BORDER-BOTTOM: #dddddd 1px solid;   FONT-FAMILY: "tahoma";  BACKGROUND-COLOR: #fefefb
+}
+	 
+.text_box2 {
+
+	  padding-left:1px;  FONT-SIZE: 12px;  border-top: #f2f2f2 1px solid;   border-left: #f2f2f2 1px solid;	  COLOR: #765C29; 
+	  FONT-FAMILY: "tahoma";  BACKGROUND-COLOR: #f2f2f2;
+}		
+.text_box3 
+{
+	 padding-left:3px;padding-top:3px;
+}
+/*2007.8.23¿œ √ﬂ∞°µ» css*/
+.login-t-m{font-family:µ∏¿Ω; font-size:11px; color:#274503;}
+.login-t-m2{font-family:µ∏¿Ω;font-size:11px; color:#6F09D7;}
+
+/*2007.0906 √ﬂ∞°µ» css*/
+.txt-a{font-family:µ∏¿Ω; font-size:12px; color:#274503;font-weight:bold;}
+
+/*2011 √ﬂ∞°µ» css*/
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+#logindisplay
+{
+    font-size:1.1em;
+    display:block;
+    text-align:right;
+    margin:10px;
+    color:#656565;
+}
+
+#logindisplay a:link
+{
+    color: #656565;
+    text-decoration: underline;
+}
+
+#logindisplay a:visited
+{
+    color: #656565;
+    text-decoration: underline;
+}
+
+#logindisplay a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{    
+    
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+    position: relative;
+    margin-bottom: 0px;
+    background-color: Orange;
+    padding: 0;
+    height:180px;
+}
+
+#mainmenu
+{
+    position:relative;
+    text-align:right;
+    right:36px;
+    bottom:58px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px !important;
+    
+}
+#main
+{
+    background-color: White;
+    width:99%;
+}
+#contents
+{
+     padding: 30px 30px 15px 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscore */
+}
+
+#footer
+{
+    background-image:url(../gps/Content/images/bg2.gif);
+    padding: 5px 0px 15px 0px;
+    height:70px;
+    width:100%;
+}

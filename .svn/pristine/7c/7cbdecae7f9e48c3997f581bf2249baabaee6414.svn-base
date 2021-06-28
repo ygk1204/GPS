@@ -1,0 +1,426 @@
+﻿/* CREATE out */
+
+
+#MaterialMainArea
+{
+    clear:both;
+    width:650px;
+    overflow:hidden;
+
+}
+#ApprovalInfoArea
+{
+    width:650px;
+    clear:both;
+}
+#AlermMailArea
+{
+    width:650px;
+    clear:both;
+}
+#delay_history_area
+{
+    width:650px;
+    clear:both;
+}
+#MaterialItemAreaf
+{   
+    width:650px;
+    clear:both;
+}
+#Submitarea
+{
+    padding-top:10px;
+    text-align:center;
+    width:600px;
+    clear:both;
+}
+.editor-label
+{
+   text-align:center;
+
+}
+.editor-field
+{
+
+}
+.editor-field select
+{
+    display:inline;
+}
+.editor-label-left
+{
+    text-align: center;
+    display:inline;
+    padding-left:3px;
+    height:17px;
+}
+
+.editor-field-left
+{
+    height:17px;
+    display:inline;
+}
+
+td label
+{
+    display:inline;
+    text-align:center;
+}
+
+.materialitem
+{
+    clear:both;
+    width:650px;
+}
+
+.materialitem  .editor-field
+{
+    clear:both;
+    vertical-align:bottom;
+    margin-bottom:0px;
+    text-align:left;
+    display:inline;
+}
+.itemhead li
+{
+    display:inline;
+    list-style-type:none;
+}
+.itemhead
+{
+    border-collapse:collapse;
+    width:534px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;
+    background-color:#F6F6F6;
+}
+.itemhead tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+}
+.itemhead-B
+{
+    border-collapse:collapse;
+    width:602px;
+    border-top: 0px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;
+    background-color:#F6F6F6;
+}
+.itemhead-B tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+}
+.ItemTable
+{
+    border-collapse:collapse;
+    width:534px;
+    float:left;
+    border-top: 0px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+}
+.ItemTable  tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+}
+#mfg_type
+{
+    
+}
+#material_kind_select
+{
+    float:left;
+    clear:both;
+
+}
+.materialitemset
+{
+    clear:both;
+    width:650px;
+}
+.originalmaterialitemset
+{
+    clear:both;
+    width:650px;
+}
+
+#submitarea
+{
+    clear:both;
+    width:650px;
+    text-align:center;
+}
+#MaterialMainArea table 
+{
+    width:600px;
+    margin-bottom:10px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;
+    background-color:#F6F6F6;
+    border-collapse:collapse
+        
+}
+#MaterialMainArea table tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+    border-collapse:collapse
+}
+
+#ApprovalInfoArea table 
+{
+    width:600px;
+    margin-bottom:10px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0; 
+    background-color:#F6F6F6;   
+    border-collapse:collapse
+}
+#ApprovalInfoArea table tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+    border-collapse:collapse;
+}
+#AlermMailArea table 
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;   
+}
+#AlermMailArea table tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+}
+
+#iteminfo
+{
+    margin-top:5px;
+    width:600px;
+    font-weight:bold;
+    text-align:center;
+    font-size:14px;
+    border: 1px solid #C0C0C0; 
+    background-color:#d0d0f1;
+    padding-bottom:8px;
+    padding-top:8px;
+}
+#AlermMailArea .NsForm table
+{
+    width:536px;
+    border-top: 0px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+}
+.NsForm
+{
+    width:100%;
+    overflow:hidden;
+    height:auto;
+}
+.1sForm
+{
+    width:100%;
+    overflow:hidden;
+    height:auto;
+}
+.ItemTable-B
+{
+    width:602px;
+    float:left;
+    border-top: 0px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+    border-collapse:collapse
+}
+.ItemTable-B  tr td
+{
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+    background-color:#F6F6F6;
+}
+.RemoveItem
+{
+
+}
+
+
+
+
+/*  check for item */
+#Checkitem
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+    margin-top:5px;
+    margin-bottom:5px;
+}
+#Checkitem tr th
+{
+    border-collapse:collapse;
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#cff5b7;  
+    font-weight:bold;
+    text-align:center;
+}
+#Checkitem tr td
+{    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+
+#delay_history
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+    margin-top:5px;
+    margin-bottom:5px;
+}
+#delay_history tr th
+{
+    border-collapse:collapse;
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#cff5b7;  
+    font-weight:bold;
+    text-align:center;
+}
+#delay_history tr td
+{    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+
+
+#banchulcheck
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+}
+#banchulcheck tr td
+{    
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+
+#carryoutreason
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0;  
+}
+#carryoutreason tr td
+{   
+    width:50%; 
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+
+#guardcomment
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 0px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;  
+}
+#guardcomment tr td
+{    
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+
+.commomTable
+{
+    border-collapse:collapse;
+    width:600px;
+    border-top: 1px solid #C0C0C0;
+    border-left: 1px solid #C0C0C0;  
+    border-right: 0px solid #C0C0C0;  
+    border-bottom: 0px solid #C0C0C0;
+    margin-bottom:3px;
+    margin-top:3px;
+}
+.commomTable tr td
+{    
+    border-right: 1px solid #C0C0C0;  
+    border-bottom: 1px solid #C0C0C0; 
+    background-color:#F6F6F6;  
+}
+.warning1
+{
+    color:Red;
+    font-weight:bold;
+}
+.warning2
+{
+    color:Red;
+    font-weight:bold;
+}
+.warning3
+{
+    color:Red;
+    font-weight:bold;
+}
+.warning4
+{
+    color:Red;
+    font-weight:bold;
+}
+
+.titleofmaterial
+{
+    text-align:center;
+ 
+    font-weight:bold;
+}
+.loadingimage
+{
+    padding-left: 270px;
+    padding-top: 18px;
+}

@@ -1,0 +1,126 @@
+﻿/* body 스타일 */
+body {
+	font-size:75%;
+	line-height:1.2;
+	font-family:"돋움", Dotum, "굴림", Gulim, Verdana, AppleGothic, sans-serif;
+}
+
+
+
+#wrapper {
+	width:890px;
+	margin:0 auto;
+}
+#header {
+	background:url(/Content/images/master/bg_menubox.png) no-repeat 0 0;
+}
+#contents { 
+	background-color:#F8FEFD;
+	float:left;
+	height:auto;
+	width:890px;
+}
+#subWrap {
+	float:left;
+	display: inline; /* IE6의 더블마진 버그 해결 위해 추가 */
+	width:163px;
+	//margin-left:30px;
+	margin-right:18px;
+	background:url(/Content/images/master/subwrap_bg.gif) no-repeat top right;
+}
+#leftmenu 
+{
+    margin-bottom:30px;
+}
+#leftmenu li a 
+{
+    margin-left:25px;
+}
+#contentsWrap {	
+	float:left;
+	width:640px;
+
+    
+}
+#slogan h2 {
+	position:absolute;
+	overflow:hidden;	
+	width:1px;
+	height:1px;
+	font-size:0;
+	line-height:0;
+}
+#footer  
+{
+}
+.footerInner {
+} 
+.footerLogo {
+	position:absolute;
+	top:60px;	
+	left:43px;	
+}
+.guideMenu, address {
+	margin-left:163px;
+	margin-top:42px;
+} 
+.guideMenu {  
+  overflow:auto;
+	width:686px;
+	margin-bottom:17px;
+	background:#7b8385 url(/Content/images/master/bg_guide_menu.gif) no-repeat 100% -35px; 
+}
+address { 
+  clear:both; 
+	padding:0 0 15px 3px;
+	font-size:0.92em;
+	line-height:1.5;
+	color:#787878;
+} 
+address .addr {
+	padding-right:10px;
+}
+address .tel, address .fax, address .email {
+	padding: 0px 3px;
+}
+
+/*메뉴 */
+
+
+/*로그인 화면*/
+#login
+{
+    width:640px;
+    height:322px;
+    background:url(/Content/images/master/login.png) no-repeat 0 0;
+    
+}
+#login input
+{
+    width:124px;
+    height:18px;
+}
+#login_submit input
+{
+    width:50px;
+    height:50px;
+    background-color:White;
+}
+#login_id
+{
+    position:relative;
+    left:183px;
+    top:92px;
+}
+#login_pw
+{
+    position:relative;
+    left:183px;
+    top:100px;
+}
+#login_submit
+{
+    position:relative;
+    left:320px;
+    top:50px;
+}
